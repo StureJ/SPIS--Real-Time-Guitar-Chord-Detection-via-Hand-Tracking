@@ -7,17 +7,19 @@
 A real-time system that detects guitar chords from hand movements using signal processing and machine learning.
 
 ⚙️ How it works
-Tracks hand landmarks with MediaPipe
+Camera captures Webcam video and MediaPipe extracts finger joint/hand positions
 
-Extracts fingertip distances
+Fingertip coordinates are extracted from the detected hand position
 
-Applies median filtering to stabilize noisy hand tracking signals 
+Pairwise distances between fingertips are computed to describe hand geometry
 
-Applies sliding window
+A median filter (kernel size = 3) is applied to reduce jitter while keeping low latency
 
-Generates features over time
+A sliding window stores recent frames to capture motion over time
 
-Predicts chords using a trained SVM model
+Windowed data is converted into features using mean and standard deviation, then scaled and passed into a trained SVM model
+
+Final predictions are stabilized using a short voting buffer to reduce flickering outputs
 
 🧠 Tech Stack
 Python • OpenCV • MediaPipe • NumPy • Scikit-learn
