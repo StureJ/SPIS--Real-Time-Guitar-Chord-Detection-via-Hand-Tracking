@@ -1,2 +1,3 @@
 # SPIS
 
+![demo](example.gif)
