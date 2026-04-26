@@ -4,6 +4,7 @@
 
 
 🎸 Overview
+
 A real-time system that detects guitar chords from hand movements using signal processing and machine learning.
 
 ⚙️ How it works
@@ -22,4 +23,5 @@ Windowed data is converted into features using mean and standard deviation, then
 Final predictions are stabilized using a short voting buffer to reduce flickering outputs
 
 🧠 Tech Stack
+
 Python • OpenCV • MediaPipe • NumPy • Scikit-learn
