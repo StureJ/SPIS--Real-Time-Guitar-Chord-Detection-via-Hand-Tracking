@@ -13,7 +13,7 @@ Fingertip coordinates are extracted from the detected hand position
 
 Pairwise distances between fingertips are computed to describe hand geometry
 
-A median filter (kernel size = 3) is applied to reduce jitter while keeping low latency
+A median filter is applied to reduce jitter while keeping low latency
 
 A sliding window stores recent frames to capture motion over time
 
